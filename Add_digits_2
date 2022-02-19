@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int  open (int n, int temp){
+    if(n != 0) {
+        temp += n % 10;
+        n = (n - n % 10)/10;
+        open(n+temp, 0);
+    }
+    return temp;
+}
+int main() {
+    open(38 ,0);
+}
